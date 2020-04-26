@@ -171,7 +171,7 @@ class ApiClient(object):
                 return_data = None
 
         if _return_http_data_only:
-            return (return_data)
+            return return_data, response_data
         else:
             return (return_data, response_data.status,
                     response_data.getheaders())
@@ -364,6 +364,7 @@ class ApiClient(object):
                                             _request_timeout=_request_timeout,
                                             body=body)
         elif method == "POST":
+            print("-----body:", body)
             return self.rest_client.POST(url,
                                          query_params=query_params,
                                          headers=headers,

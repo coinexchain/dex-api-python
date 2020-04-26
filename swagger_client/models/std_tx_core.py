@@ -144,8 +144,8 @@ class StdTxCore(object):
         :param signatures: The signatures of this StdTxCore.  # noqa: E501
         :type: list[StdTxCoreSignatures]
         """
-        if signatures is None:
-            raise ValueError("Invalid value for `signatures`, must not be `None`")  # noqa: E501
+        # if signatures is None:
+        #     raise ValueError("Invalid value for `signatures`, must not be `None`")  # noqa: E501
 
         self._signatures = signatures
 

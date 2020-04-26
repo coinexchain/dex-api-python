@@ -1,50 +1,84 @@
+import json
+
 from swagger_client.api.auth_api import AuthApi
 from swagger_client.api_client import ApiClient
+from swagger_client.api.bank_api import BankApi
+from swagger_client.api.transactions_api import TransactionsApi
+from swagger_client.models.account import Account
+from swagger_client.models.tx_broadcast import TxBroadcast
+from swagger_client.models.std_tx_core import StdTxCore
+import ctypes
 
 
 class ApiContext(object):
 
-    def __init__(self, name, password, base_req):
+    def __init__(self, from_address, name, password, base_req, lib):
         self.client = ApiClient()
+        self.from_address = from_address
         self.name = name
         self.password = password
         self.base_req = base_req
+        self.lib = lib
 
     def refresh_acc_num_and_seq(self):
-        data = AuthApi().get_account(address=self.name)
-        if data.result is not None:
-            self.base_req.account_number = data.result.account_number
-            self.base_req.sequence = data.result.sequence
+        (data, data_str) = AuthApi().get_account(address=self.from_address)
+        self.base_req['account_number'] = data.result.account_number
+        self.base_req['sequence'] = data.result.sequence
+
+    def sign_and_broadcast(self, unsigned_bytes):
+        sign = self.lib.SignAndBuildBroadcast
+        sign.restype = ctypes.c_char_p
+        bz = sign(self.name, self.password, str.encode(unsigned_bytes), self.base_req['chain_id'].encode("utf-8"),
+                  "block".encode("utf-8"), int(self.base_req['account_number']), int(self.base_req['sequence']))
+        tx = json.loads(bz)
+        tx = tx['tx']
+        std_tx = StdTxCore(tx['msg'], tx['fee'], tx['memo'], tx['signatures'])
+        tx_broadcast = TxBroadcast(std_tx, 'block')
+        (resp, resp_str) = TransactionsApi().broadcast_tx(tx_broadcast)
+        return resp
 
 
-class BaseReq(object):
+def test():
+    # init keybase
+    key_name = "key_name".encode("utf-8")
+    password = "12345678".encode("utf-8")
+    from_addr = "coinex10hmcj9sp6gef5244wxkwt9jgweuwpp9fjcmwng"
 
-    def __init__(self, chain_id, fees, from_address, gas, memo):
-        self.account_number = "0"
-        self.chain_id = chain_id
-        self.fees = fees
-        self.from_address = from_address
-        self.gas = gas
-        self.gas_adjustment = "1.1"
-        self.memo = memo
-        self.sequence = "0"
-        self.simulate = False
+    lib = ctypes.CDLL('./wallet_mac.so')
+    lib.BearInit('tmp'.encode("utf-8"))
+    get_address = lib.GetAddress
+    get_address.restype = ctypes.c_char_p
 
-    def set_fees(self, amount):
-        self.fees[0].amount = amount
+    # init param
+    fee = [
+        {
+            'denom': 'cet',
+            'amount': "50000000"
+        }
+    ]
+    gas = "500000"
+    req = {
+        'account_number': "0",
+        'chain_id': "coinexdex-test1",
+        'fees': fee,
+        'from': from_addr,
+        'gas': gas,
+        'gas_adjustment': "1.1",
+        'memo': "",
+        'sequence': "0",
+        'simulate': False,
+    }
+    base_req = req
+    account = Account(base_req, fee, "0")
 
-    def set_gas(self, gas):
-        self.gas = gas
+    # init context
+    ctx = ApiContext(from_addr, key_name, password, base_req, lib)
+    ctx.refresh_acc_num_and_seq()
 
-    def set_memo(self, memo):
-        self.memo = memo
-
-    def set_account_number(self, account_number):
-        self.account_number = account_number
-
-    def set_sequence(self, sequence):
-        self.sequence = sequence
+    # transfer coins
+    (res, res_str) = BankApi().send_coins("coinex1h6favnlytw3lgpy8cm6lcv530z0ctj6rplwt06", account)
+    ctx.sign_and_broadcast(res_str.data)
 
 
 if __name__ == "__main__":
-    ApiContext("coinex1h6favnlytw3lgpy8cm6lcv530z0ctj6rplwt06", "123", None).refresh_acc_num_and_seq()
+    test()
