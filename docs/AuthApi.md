@@ -1,4 +1,4 @@
-# swagger_client.AuthApi
+# dex_api_python.AuthApi
 
 All URIs are relative to *https://dex-api.coinex.org*
 
@@ -18,13 +18,13 @@ Get the account information on blockchain
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AuthApi()
-address = 'address_example' # str | Account address
+api_instance = dex_api_python.AuthApi()
+address = 'coinex16gdxm24ht2mxtpz9cma6tr6a6d47x63hlq4pxt' # str | Account address
 
 try:
     # Get the account information on blockchain
@@ -64,12 +64,12 @@ Get the current auth parameters
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AuthApi()
+api_instance = dex_api_python.AuthApi()
 
 try:
     # Get the current auth parameters
@@ -106,14 +106,14 @@ Set referee for account
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AuthApi()
-address = 'address_example' # str | Account address in bech32 format
-referee = swagger_client.Referee() # Referee | Referee
+api_instance = dex_api_python.AuthApi()
+address = 'coinex16gdxm24ht2mxtpz9cma6tr6a6d47x63hlq4pxt' # str | Account address in bech32 format
+referee = dex_api_python.Referee() # Referee | Referee
 
 try:
     # Set referee for account

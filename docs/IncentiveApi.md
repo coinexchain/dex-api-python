@@ -1,4 +1,4 @@
-# swagger_client.IncentiveApi
+# dex_api_python.IncentiveApi
 
 All URIs are relative to *https://dex-api.coinex.org*
 
@@ -16,12 +16,12 @@ Get the current incentive parameters
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.IncentiveApi()
+api_instance = dex_api_python.IncentiveApi()
 
 try:
     # Get the current incentive parameters

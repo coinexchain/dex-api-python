@@ -1,4 +1,4 @@
-# swagger_client.GovernanceApi
+# dex_api_python.GovernanceApi
 
 All URIs are relative to *https://dex-api.coinex.org*
 
@@ -33,14 +33,14 @@ Send transaction to deposit tokens to a proposal
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GovernanceApi()
-proposal_id = 'proposal_id_example' # str | proposal id
-post_deposit_body = swagger_client.PostDepositBody() # PostDepositBody | 
+api_instance = dex_api_python.GovernanceApi()
+proposal_id = '2' # str | proposal id
+post_deposit_body = dex_api_python.PostDepositBody() # PostDepositBody | 
 
 try:
     # Deposit tokens to a proposal
@@ -83,14 +83,14 @@ Query deposit by proposalId and depositor address
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GovernanceApi()
-proposal_id = 'proposal_id_example' # str | proposal id
-depositor = 'depositor_example' # str | Bech32 depositor address
+api_instance = dex_api_python.GovernanceApi()
+proposal_id = '2' # str | proposal id
+depositor = 'coinex1xl6453f6q6dv5770c9ue6hspdc0vxfuqtudkhz' # str | Bech32 depositor address
 
 try:
     # Query deposit
@@ -133,12 +133,12 @@ Query governance deposit parameters. The max_deposit_period units are in nanosec
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GovernanceApi()
+api_instance = dex_api_python.GovernanceApi()
 
 try:
     # Query governance deposit parameters
@@ -177,13 +177,13 @@ Query deposits by proposalId
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GovernanceApi()
-proposal_id = 'proposal_id_example' # str | 
+api_instance = dex_api_python.GovernanceApi()
+proposal_id = '2' # str | 
 
 try:
     # Query deposits
@@ -225,13 +225,13 @@ Query a proposal by id
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GovernanceApi()
-proposal_id = 'proposal_id_example' # str | 
+api_instance = dex_api_python.GovernanceApi()
+proposal_id = '1' # str | 
 
 try:
     # Query a proposal
@@ -273,12 +273,12 @@ Query proposals information with parameters
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GovernanceApi()
+api_instance = dex_api_python.GovernanceApi()
 voter = 'voter_example' # str | voter address (optional)
 depositor = 'depositor_example' # str | depositor address (optional)
 status = 'status_example' # str | proposal status, valid values can be `\"deposit_period\"`, `\"voting_period\"`, `\"passed\"`, `\"rejected\"` (optional)
@@ -325,13 +325,13 @@ Query for the proposer for a proposal
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GovernanceApi()
-proposal_id = 'proposal_id_example' # str | 
+api_instance = dex_api_python.GovernanceApi()
+proposal_id = '2' # str | 
 
 try:
     # Query proposer
@@ -373,13 +373,13 @@ Gets a proposal's tally result at the current time. If the proposal is pending d
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GovernanceApi()
-proposal_id = 'proposal_id_example' # str | proposal id
+api_instance = dex_api_python.GovernanceApi()
+proposal_id = '2' # str | proposal id
 
 try:
     # Get a proposal's tally result at the current time
@@ -421,12 +421,12 @@ Query governance tally parameters
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GovernanceApi()
+api_instance = dex_api_python.GovernanceApi()
 
 try:
     # Query governance tally parameters
@@ -465,14 +465,14 @@ Query vote information by proposal Id and voter address
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GovernanceApi()
-proposal_id = 'proposal_id_example' # str | proposal id
-voter = 'voter_example' # str | Bech32 voter address
+api_instance = dex_api_python.GovernanceApi()
+proposal_id = '2' # str | proposal id
+voter = 'coinex1qwl879nx9t6kef4supyazayf7vjhennyjqwjgr' # str | Bech32 voter address
 
 try:
     # Query vote
@@ -515,13 +515,13 @@ Query voters information by proposalId
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GovernanceApi()
-proposal_id = 'proposal_id_example' # str | proposal id
+api_instance = dex_api_python.GovernanceApi()
+proposal_id = '2' # str | proposal id
 
 try:
     # Query voters
@@ -563,12 +563,12 @@ Query governance voting parameters. The voting_period units are in nanoseconds.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GovernanceApi()
+api_instance = dex_api_python.GovernanceApi()
 
 try:
     # Query governance voting parameters
@@ -607,13 +607,13 @@ Generate a community pool spend proposal transaction
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GovernanceApi()
-post_proposal_body = swagger_client.PostProposalBody2() # PostProposalBody2 | The community pool spend proposal body contains coin amount to be spent
+api_instance = dex_api_python.GovernanceApi()
+post_proposal_body = dex_api_python.PostProposalBody2() # PostProposalBody2 | The community pool spend proposal body contains coin amount to be spent
 
 try:
     # Generate a community pool spend proposal transaction
@@ -655,13 +655,13 @@ Generate a parameter change proposal transaction
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GovernanceApi()
-post_proposal_body = swagger_client.PostProposalBody1() # PostProposalBody1 | The parameter change proposal body that contains all parameter changes
+api_instance = dex_api_python.GovernanceApi()
+post_proposal_body = dex_api_python.PostProposalBody1() # PostProposalBody1 | The parameter change proposal body that contains all parameter changes
 
 try:
     # Generate a parameter change proposal transaction
@@ -703,13 +703,13 @@ Send transaction to submit a proposal
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GovernanceApi()
-post_proposal_body = swagger_client.PostProposalBody() # PostProposalBody | valid value of `\"proposal_type\"` can be `\"text\"`, `\"parameter_change\"`, `\"software_upgrade\"`
+api_instance = dex_api_python.GovernanceApi()
+post_proposal_body = dex_api_python.PostProposalBody() # PostProposalBody | valid value of `\"proposal_type\"` can be `\"text\"`, `\"parameter_change\"`, `\"software_upgrade\"`
 
 try:
     # Submit a proposal
@@ -751,14 +751,14 @@ Send transaction to vote a proposal
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.GovernanceApi()
-proposal_id = 'proposal_id_example' # str | proposal id
-post_vote_body = swagger_client.PostVoteBody() # PostVoteBody | valid value of `\"option\"` field can be `\"yes\"`, `\"no\"`, `\"no_with_veto\"` and `\"abstain\"`
+api_instance = dex_api_python.GovernanceApi()
+proposal_id = '2' # str | proposal id
+post_vote_body = dex_api_python.PostVoteBody() # PostVoteBody | valid value of `\"option\"` field can be `\"yes\"`, `\"no\"`, `\"no_with_veto\"` and `\"abstain\"`
 
 try:
     # Vote a proposal

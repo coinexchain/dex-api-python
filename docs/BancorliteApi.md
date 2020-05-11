@@ -1,4 +1,4 @@
-# swagger_client.BancorliteApi
+# dex_api_python.BancorliteApi
 
 All URIs are relative to *https://dex-api.coinex.org*
 
@@ -21,13 +21,13 @@ cancel bancor
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.BancorliteApi()
-bancor_cancel = swagger_client.BancorCancel() # BancorCancel | cancel bancor
+api_instance = dex_api_python.BancorliteApi()
+bancor_cancel = dex_api_python.BancorCancel() # BancorCancel | cancel bancor
 
 try:
     # cancel bancor
@@ -67,13 +67,13 @@ create bancor
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.BancorliteApi()
-bancor_init = swagger_client.BancorInit() # BancorInit | create bancor
+api_instance = dex_api_python.BancorliteApi()
+bancor_init = dex_api_python.BancorInit() # BancorInit | create bancor
 
 try:
     # create bancor
@@ -113,13 +113,13 @@ trade with bancor
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.BancorliteApi()
-bancor_trade = swagger_client.BancorTrade() # BancorTrade | trade with bancor
+api_instance = dex_api_python.BancorliteApi()
+bancor_trade = dex_api_python.BancorTrade() # BancorTrade | trade with bancor
 
 try:
     # trade with bancor
@@ -159,13 +159,13 @@ get the bancor pool info
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.BancorliteApi()
-symbol = 'symbol_example' # str | stock and money pair
+api_instance = dex_api_python.BancorliteApi()
+symbol = 'btc-cet' # str | stock and money pair
 
 try:
     # get the bancor pool info
@@ -205,12 +205,12 @@ get all bancor infos
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.BancorliteApi()
+api_instance = dex_api_python.BancorliteApi()
 
 try:
     # get all bancor infos
@@ -247,12 +247,12 @@ Get the current bancorlite parameters
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.BancorliteApi()
+api_instance = dex_api_python.BancorliteApi()
 
 try:
     # Get the current bancorlite parameters

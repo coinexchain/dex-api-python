@@ -1,4 +1,4 @@
-# swagger_client.StakingApi
+# dex_api_python.StakingApi
 
 All URIs are relative to *https://dex-api.coinex.org*
 
@@ -32,13 +32,13 @@ Get all delegations from a delegator
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.StakingApi()
-delegator_addr = 'delegator_addr_example' # str | Bech32 AccAddress of Delegator
+api_instance = dex_api_python.StakingApi()
+delegator_addr = 'coinex167w96tdvmazakdwkw2u57227eduula2cy572lf' # str | Bech32 AccAddress of Delegator
 
 try:
     # Get all delegations from a delegator
@@ -78,13 +78,13 @@ Get all delegations from a validator
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.StakingApi()
-validator_addr = 'validator_addr_example' # str | Bech32 OperatorAddress of validator
+api_instance = dex_api_python.StakingApi()
+validator_addr = 'coinexvaloper1qwl879nx9t6kef4supyazayf7vjhennyh568ys' # str | Bech32 OperatorAddress of validator
 
 try:
     # Get all delegations from a validator
@@ -124,14 +124,14 @@ Query the current delegation between a delegator and a validator
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.StakingApi()
-delegator_addr = 'delegator_addr_example' # str | Bech32 AccAddress of Delegator
-validator_addr = 'validator_addr_example' # str | Bech32 OperatorAddress of validator
+api_instance = dex_api_python.StakingApi()
+delegator_addr = 'coinex167w96tdvmazakdwkw2u57227eduula2cy572lf' # str | Bech32 AccAddress of Delegator
+validator_addr = 'coinexvaloper1qwl879nx9t6kef4supyazayf7vjhennyh568ys' # str | Bech32 OperatorAddress of validator
 
 try:
     # Query the current delegation between a delegator and a validator
@@ -172,13 +172,13 @@ Get all staking txs (i.e msgs) from a delegator
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.StakingApi()
-delegator_addr = 'delegator_addr_example' # str | Bech32 AccAddress of Delegator
+api_instance = dex_api_python.StakingApi()
+delegator_addr = 'coinex167w96tdvmazakdwkw2u57227eduula2cy572lf' # str | Bech32 AccAddress of Delegator
 
 try:
     # Get all staking txs (i.e msgs) from a delegator
@@ -218,12 +218,12 @@ Get all redelegations (filter by query params)
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.StakingApi()
+api_instance = dex_api_python.StakingApi()
 delegator = 'delegator_example' # str | Bech32 AccAddress of Delegator (optional)
 validator_from = 'validator_from_example' # str | Bech32 ValAddress of SrcValidator (optional)
 validator_to = 'validator_to_example' # str | Bech32 ValAddress of DstValidator (optional)
@@ -268,12 +268,12 @@ Get the current staking parameter values
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.StakingApi()
+api_instance = dex_api_python.StakingApi()
 
 try:
     # Get the current staking parameter values
@@ -310,12 +310,12 @@ Get the current state of the staking pool
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.StakingApi()
+api_instance = dex_api_python.StakingApi()
 
 try:
     # Get the current state of the staking pool
@@ -352,14 +352,14 @@ Query all unbonding delegations between a delegator and a validator
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.StakingApi()
-delegator_addr = 'delegator_addr_example' # str | Bech32 AccAddress of Delegator
-validator_addr = 'validator_addr_example' # str | Bech32 OperatorAddress of validator
+api_instance = dex_api_python.StakingApi()
+delegator_addr = 'coinex167w96tdvmazakdwkw2u57227eduula2cy572lf' # str | Bech32 AccAddress of Delegator
+validator_addr = 'coinexvaloper1qwl879nx9t6kef4supyazayf7vjhennyh568ys' # str | Bech32 OperatorAddress of validator
 
 try:
     # Query all unbonding delegations between a delegator and a validator
@@ -400,13 +400,13 @@ Get all unbonding delegations from a delegator
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.StakingApi()
-delegator_addr = 'delegator_addr_example' # str | Bech32 AccAddress of Delegator
+api_instance = dex_api_python.StakingApi()
+delegator_addr = 'coinex167w96tdvmazakdwkw2u57227eduula2cy572lf' # str | Bech32 AccAddress of Delegator
 
 try:
     # Get all unbonding delegations from a delegator
@@ -446,13 +446,13 @@ Get all unbonding delegations from a validator
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.StakingApi()
-validator_addr = 'validator_addr_example' # str | Bech32 OperatorAddress of validator
+api_instance = dex_api_python.StakingApi()
+validator_addr = 'coinexvaloper1qwl879nx9t6kef4supyazayf7vjhennyh568ys' # str | Bech32 OperatorAddress of validator
 
 try:
     # Get all unbonding delegations from a validator
@@ -492,13 +492,13 @@ Query the information from a single validator
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.StakingApi()
-validator_addr = 'validator_addr_example' # str | Bech32 OperatorAddress of validator
+api_instance = dex_api_python.StakingApi()
+validator_addr = 'coinexvaloper1qwl879nx9t6kef4supyazayf7vjhennyh568ys' # str | Bech32 OperatorAddress of validator
 
 try:
     # Query the information from a single validator
@@ -538,14 +538,14 @@ Query a validator that a delegator is bonded to
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.StakingApi()
-delegator_addr = 'delegator_addr_example' # str | Bech32 AccAddress of Delegator
-validator_addr = 'validator_addr_example' # str | Bech32 ValAddress of Delegator
+api_instance = dex_api_python.StakingApi()
+delegator_addr = 'coinex167w96tdvmazakdwkw2u57227eduula2cy572lf' # str | Bech32 AccAddress of Delegator
+validator_addr = 'coinexvaloper1qwl879nx9t6kef4supyazayf7vjhennyh568ys' # str | Bech32 ValAddress of Delegator
 
 try:
     # Query a validator that a delegator is bonded to
@@ -586,15 +586,15 @@ Get all validator candidates. By default it returns only the bonded validators.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.StakingApi()
-status = 'status_example' # str | The validator bond status. Must be either 'bonded', 'unbonded', or 'unbonding'. (optional)
-page = 56 # int | The page number. (optional)
-limit = 56 # int | The maximum number of items per page. (optional)
+api_instance = dex_api_python.StakingApi()
+status = 'bonded' # str | The validator bond status. Must be either 'bonded', 'unbonded', or 'unbonding'. (optional)
+page = 1 # int | The page number. (optional)
+limit = 1 # int | The maximum number of items per page. (optional)
 
 try:
     # Get all validator candidates. By default it returns only the bonded validators.
@@ -636,13 +636,13 @@ Query all validators that a delegator is bonded to
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.StakingApi()
-delegator_addr = 'delegator_addr_example' # str | Bech32 AccAddress of Delegator
+api_instance = dex_api_python.StakingApi()
+delegator_addr = 'coinex167w96tdvmazakdwkw2u57227eduula2cy572lf' # str | Bech32 AccAddress of Delegator
 
 try:
     # Query all validators that a delegator is bonded to
@@ -682,14 +682,14 @@ Submit delegation
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.StakingApi()
-delegator_addr = 'delegator_addr_example' # str | Bech32 AccAddress of Delegator
-delegation = swagger_client.Delegation() # Delegation | submit delegation to provided validator (optional)
+api_instance = dex_api_python.StakingApi()
+delegator_addr = 'coinex167w96tdvmazakdwkw2u57227eduula2cy572lf' # str | Bech32 AccAddress of Delegator
+delegation = dex_api_python.Delegation() # Delegation | submit delegation to provided validator (optional)
 
 try:
     # Submit delegation
@@ -730,14 +730,14 @@ Submit a redelegation
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.StakingApi()
-delegator_addr = 'delegator_addr_example' # str | Bech32 AccAddress of Delegator
-delegation = swagger_client.Delegation2() # Delegation2 | The sender and tx information (optional)
+api_instance = dex_api_python.StakingApi()
+delegator_addr = 'coinex167w96tdvmazakdwkw2u57227eduula2cy572lf' # str | Bech32 AccAddress of Delegator
+delegation = dex_api_python.Delegation2() # Delegation2 | The sender and tx information (optional)
 
 try:
     # Submit a redelegation
@@ -778,14 +778,14 @@ Submit an unbonding delegation
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.StakingApi()
-delegator_addr = 'delegator_addr_example' # str | Bech32 AccAddress of Delegator
-delegation = swagger_client.Delegation1() # Delegation1 | The password of the account to remove from the KMS (optional)
+api_instance = dex_api_python.StakingApi()
+delegator_addr = 'coinex167w96tdvmazakdwkw2u57227eduula2cy572lf' # str | Bech32 AccAddress of Delegator
+delegation = dex_api_python.Delegation1() # Delegation1 | The password of the account to remove from the KMS (optional)
 
 try:
     # Submit an unbonding delegation

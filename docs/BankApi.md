@@ -1,4 +1,4 @@
-# swagger_client.BankApi
+# dex_api_python.BankApi
 
 All URIs are relative to *https://dex-api.coinex.org*
 
@@ -20,13 +20,13 @@ Get the account balances
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.BankApi()
-address = 'address_example' # str | Account address in bech32 format
+api_instance = dex_api_python.BankApi()
+address = 'coinex16gdxm24ht2mxtpz9cma6tr6a6d47x63hlq4pxt' # str | Account address in bech32 format
 
 try:
     # Get the account balances
@@ -66,12 +66,12 @@ Get the current bankx parameters
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.BankApi()
+api_instance = dex_api_python.BankApi()
 
 try:
     # Get the current bankx parameters
@@ -108,14 +108,14 @@ Send coins from one account to another
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.BankApi()
-address = 'address_example' # str | Account address in bech32 format
-account = swagger_client.Account() # Account | The sender and tx information
+api_instance = dex_api_python.BankApi()
+address = 'coinex16gdxm24ht2mxtpz9cma6tr6a6d47x63hlq4pxt' # str | Account address in bech32 format
+account = dex_api_python.Account() # Account | The sender and tx information
 
 try:
     # Send coins from one account to another
@@ -156,13 +156,13 @@ Mark if memo is required to receive coins
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.BankApi()
-account = swagger_client.Account1() # Account1 | The mark
+api_instance = dex_api_python.BankApi()
+account = dex_api_python.Account1() # Account1 | The mark
 
 try:
     # Mark if memo is required to receive coins
@@ -202,14 +202,14 @@ Operate a supervised transfer
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.BankApi()
-address = 'address_example' # str | Account address in bech32 format
-post_tx_body = swagger_client.PostTxBody() # PostTxBody | The sender and tx information
+api_instance = dex_api_python.BankApi()
+address = 'coinex16gdxm24ht2mxtpz9cma6tr6a6d47x63hlq4pxt' # str | Account address in bech32 format
+post_tx_body = dex_api_python.PostTxBody() # PostTxBody | The sender and tx information
 
 try:
     # Operate a supervised transfer

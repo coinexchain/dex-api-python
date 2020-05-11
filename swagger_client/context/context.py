@@ -42,7 +42,7 @@ def test():
     # init keybase
     key_name = "key_name".encode("utf-8")
     password = "12345678".encode("utf-8")
-    from_addr = "coinex10hmcj9sp6gef5244wxkwt9jgweuwpp9fjcmwng"
+    from_addr = "coinex10c22dwn7hxps77tnkpj5pzu9zcpq5zf76xms55"
 
     lib = ctypes.CDLL('./wallet_mac.so')
     lib.BearInit('tmp'.encode("utf-8"))
@@ -76,7 +76,7 @@ def test():
     ctx.refresh_acc_num_and_seq()
 
     # transfer coins
-    (res, res_str) = BankApi().send_coins("coinex1h6favnlytw3lgpy8cm6lcv530z0ctj6rplwt06", account)
+    (res, res_str) = BankApi().send_coins("coinex1cdc2t8k3gexm0aad6xaxlpcprcqr768vzk8u6z", account)
     ctx.sign_and_broadcast(res_str.data)
 
 

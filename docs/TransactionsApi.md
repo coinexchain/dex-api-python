@@ -1,4 +1,4 @@
-# swagger_client.TransactionsApi
+# dex_api_python.TransactionsApi
 
 All URIs are relative to *https://dex-api.coinex.org*
 
@@ -21,13 +21,13 @@ Broadcast a signed tx to a full node
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TransactionsApi()
-tx_broadcast = swagger_client.TxBroadcast() # TxBroadcast | The tx must be a signed StdTx. The supported broadcast modes include `\"block\"`(return after tx commit), `\"sync\"`(return afer CheckTx) and `\"async\"`(return right away).
+api_instance = dex_api_python.TransactionsApi()
+tx_broadcast = dex_api_python.TxBroadcast() # TxBroadcast | The tx must be a signed StdTx. The supported broadcast modes include `\"block\"`(return after tx commit), `\"sync\"`(return afer CheckTx) and `\"async\"`(return right away).
 
 try:
     # Broadcast a signed tx
@@ -69,13 +69,13 @@ Encode a transaction (signed or not) from JSON to base64-encoded Amino serialize
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TransactionsApi()
-tx = swagger_client.Tx() # Tx | The tx to encode
+api_instance = dex_api_python.TransactionsApi()
+tx = dex_api_python.Tx() # Tx | The tx to encode
 
 try:
     # Encode a transaction to the Amino wire format
@@ -115,13 +115,13 @@ Get a Tx by hash
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TransactionsApi()
-hash = 'hash_example' # str | Tx hash
+api_instance = dex_api_python.TransactionsApi()
+hash = 'BCBE20E8D46758B96AE5883B792858296AC06E51435490FBDCAE25A72B3CC76B' # str | Tx hash
 
 try:
     # Get a Tx by hash
@@ -163,16 +163,16 @@ Search transactions by events.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TransactionsApi()
-message_action = 'message_action_example' # str | transaction events such as 'message.action=send' which results in the following endpoint: 'GET /txs?message.action=send' (optional)
-message_sender = 'message_sender_example' # str | transaction tags with sender: 'GET /txs?message.action=send&message.sender=cosmos16xyempempp92x9hyzz9wrgf94r6j9h5f06pxxv' (optional)
-page = 56 # int | Page number (optional)
-limit = 56 # int | Maximum number of items per page (optional)
+api_instance = dex_api_python.TransactionsApi()
+message_action = 'send' # str | transaction events such as 'message.action=send' which results in the following endpoint: 'GET /txs?message.action=send' (optional)
+message_sender = 'cosmos16xyempempp92x9hyzz9wrgf94r6j9h5f06pxxv' # str | transaction tags with sender: 'GET /txs?message.action=send&message.sender=cosmos16xyempempp92x9hyzz9wrgf94r6j9h5f06pxxv' (optional)
+page = 1 # int | Page number (optional)
+limit = 1 # int | Maximum number of items per page (optional)
 
 try:
     # Search transactions

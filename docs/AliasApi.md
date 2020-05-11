@@ -1,4 +1,4 @@
-# swagger_client.AliasApi
+# dex_api_python.AliasApi
 
 All URIs are relative to *https://dex-api.coinex.org*
 
@@ -19,13 +19,13 @@ Given an alias, query the corresponding address
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AliasApi()
-alias = 'alias_example' # str | The alias to be queried
+api_instance = dex_api_python.AliasApi()
+alias = 'superman' # str | The alias to be queried
 
 try:
     # Given an alias, query the corresponding address
@@ -65,12 +65,12 @@ Get the current alias parameters
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AliasApi()
+api_instance = dex_api_python.AliasApi()
 
 try:
     # Get the current alias parameters
@@ -107,13 +107,13 @@ Given an account's address, query all the corresponding aliases
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AliasApi()
-address = 'address_example' # str | The account's address to be queried
+api_instance = dex_api_python.AliasApi()
+address = 'coinex1dmz7e2fddhejdz5n7e3qc5szx3zn2gj3ta8rwj' # str | The account's address to be queried
 
 try:
     # Given an account's address, query all the corresponding aliases
@@ -153,13 +153,13 @@ Add or remove alias for an address
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AliasApi()
-alias_update_req = swagger_client.AliasUpdateReq() # AliasUpdateReq | update an address's aliases
+api_instance = dex_api_python.AliasApi()
+alias_update_req = dex_api_python.AliasUpdateReq() # AliasUpdateReq | update an address's aliases
 
 try:
     # Add or remove alias for an address

@@ -1,4 +1,4 @@
-# swagger_client.SlashingApi
+# dex_api_python.SlashingApi
 
 All URIs are relative to *https://dex-api.coinex.org*
 
@@ -21,13 +21,13 @@ Get sign info of given validator
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SlashingApi()
-validator_pub_key = 'validator_pub_key_example' # str | Bech32 validator public key
+api_instance = dex_api_python.SlashingApi()
+validator_pub_key = 'coinexvalconspub1zcjduepq7mft6gfls57a0a42d7uhx656cckhfvtrlmw744jv4q0mvlv0dypskehfk8' # str | Bech32 validator public key
 
 try:
     # Get sign info of given validator
@@ -69,14 +69,14 @@ Get sign info of all validators
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SlashingApi()
-page = 56 # int | Page number
-limit = 56 # int | Maximum number of items per page
+api_instance = dex_api_python.SlashingApi()
+page = 1 # int | Page number
+limit = 5 # int | Maximum number of items per page
 
 try:
     # Get sign info of given all validators
@@ -117,12 +117,12 @@ Get the current slashing parameters
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SlashingApi()
+api_instance = dex_api_python.SlashingApi()
 
 try:
     # Get the current slashing parameters
@@ -161,14 +161,14 @@ Send transaction to unjail a jailed validator
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SlashingApi()
-validator_addr = 'validator_addr_example' # str | Bech32 validator address
-unjail_body = swagger_client.UnjailBody() # UnjailBody | 
+api_instance = dex_api_python.SlashingApi()
+validator_addr = 'coinexvaloper1qwl879nx9t6kef4supyazayf7vjhennyh568ys' # str | Bech32 validator address
+unjail_body = dex_api_python.UnjailBody() # UnjailBody | 
 
 try:
     # Unjail a jailed validator

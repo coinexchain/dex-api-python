@@ -1,4 +1,4 @@
-# swagger_client.DistributionApi
+# dex_api_python.DistributionApi
 
 All URIs are relative to *https://dex-api.coinex.org*
 
@@ -30,14 +30,14 @@ Donate some amount of cet to the community pool
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DistributionApi()
-acc_address = 'acc_address_example' # str | Account address of the user
-amount = swagger_client.Amount() # Amount | Amount of cet to donate
+api_instance = dex_api_python.DistributionApi()
+acc_address = 'coinex1628t2zxa9antj3qtkg7xj2m4t68uljqvyjqrup' # str | Account address of the user
+amount = dex_api_python.Amount() # Amount | Amount of cet to donate
 
 try:
     # Donate to the community pool
@@ -80,13 +80,13 @@ Get the sum of all the rewards earned by delegations by a single delegator
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DistributionApi()
-delegator_addr = 'delegator_addr_example' # str | Bech32 AccAddress of Delegator
+api_instance = dex_api_python.DistributionApi()
+delegator_addr = 'coinex167w96tdvmazakdwkw2u57227eduula2cy572lf' # str | Bech32 AccAddress of Delegator
 
 try:
     # Get the total rewards balance from all delegations
@@ -126,12 +126,12 @@ Community pool parameters
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DistributionApi()
+api_instance = dex_api_python.DistributionApi()
 
 try:
     # Community pool parameters
@@ -170,13 +170,13 @@ Query the distribution information of a single validator
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DistributionApi()
-validator_addr = 'validator_addr_example' # str | Bech32 OperatorAddress of validator
+api_instance = dex_api_python.DistributionApi()
+validator_addr = 'coinexvaloper1qwl879nx9t6kef4supyazayf7vjhennyh568ys' # str | Bech32 OperatorAddress of validator
 
 try:
     # Validator distribution information
@@ -216,12 +216,12 @@ Fee distribution parameters
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DistributionApi()
+api_instance = dex_api_python.DistributionApi()
 
 try:
     # Fee distribution parameters
@@ -258,13 +258,13 @@ Fee distribution outstanding rewards of a single validator
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DistributionApi()
-validator_addr = 'validator_addr_example' # str | Bech32 OperatorAddress of validator
+api_instance = dex_api_python.DistributionApi()
+validator_addr = 'coinexvaloper1qwl879nx9t6kef4supyazayf7vjhennyh568ys' # str | Bech32 OperatorAddress of validator
 
 try:
     # Fee distribution outstanding rewards of a single validator
@@ -306,14 +306,14 @@ Query a single delegation reward by a delegator
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DistributionApi()
-delegator_addr = 'delegator_addr_example' # str | Bech32 AccAddress of Delegator
-validator_addr = 'validator_addr_example' # str | Bech32 OperatorAddress of validator
+api_instance = dex_api_python.DistributionApi()
+delegator_addr = 'coinex167w96tdvmazakdwkw2u57227eduula2cy572lf' # str | Bech32 AccAddress of Delegator
+validator_addr = 'coinexvaloper1qwl879nx9t6kef4supyazayf7vjhennyh568ys' # str | Bech32 OperatorAddress of validator
 
 try:
     # Query a delegation reward
@@ -356,13 +356,13 @@ Query the commission and self-delegation rewards of validator.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DistributionApi()
-validator_addr = 'validator_addr_example' # str | Bech32 OperatorAddress of validator
+api_instance = dex_api_python.DistributionApi()
+validator_addr = 'coinexvaloper1qwl879nx9t6kef4supyazayf7vjhennyh568ys' # str | Bech32 OperatorAddress of validator
 
 try:
     # Commission and self-delegation rewards of a single validator
@@ -404,13 +404,13 @@ Get the delegations' rewards withdrawal address. This is the address in which th
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DistributionApi()
-delegator_addr = 'delegator_addr_example' # str | Bech32 AccAddress of Delegator
+api_instance = dex_api_python.DistributionApi()
+delegator_addr = 'coinex167w96tdvmazakdwkw2u57227eduula2cy572lf' # str | Bech32 AccAddress of Delegator
 
 try:
     # Get the rewards withdrawal address
@@ -452,14 +452,14 @@ Replace the delegations' rewards withdrawal address for a new one.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DistributionApi()
-delegator_addr = 'delegator_addr_example' # str | Bech32 AccAddress of Delegator
-withdraw_request_body = swagger_client.WithdrawRequestBody2() # WithdrawRequestBody2 |  (optional)
+api_instance = dex_api_python.DistributionApi()
+delegator_addr = 'coinex167w96tdvmazakdwkw2u57227eduula2cy572lf' # str | Bech32 AccAddress of Delegator
+withdraw_request_body = dex_api_python.WithdrawRequestBody2() # WithdrawRequestBody2 |  (optional)
 
 try:
     # Replace the rewards withdrawal address
@@ -502,14 +502,14 @@ Withdraw all the delegator's delegation rewards
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DistributionApi()
-delegator_addr = 'delegator_addr_example' # str | Bech32 AccAddress of Delegator
-withdraw_request_body = swagger_client.WithdrawRequestBody() # WithdrawRequestBody |  (optional)
+api_instance = dex_api_python.DistributionApi()
+delegator_addr = 'coinex167w96tdvmazakdwkw2u57227eduula2cy572lf' # str | Bech32 AccAddress of Delegator
+withdraw_request_body = dex_api_python.WithdrawRequestBody() # WithdrawRequestBody |  (optional)
 
 try:
     # Withdraw all the delegator's delegation rewards
@@ -552,14 +552,14 @@ Withdraw the validator's self-delegation and commissions rewards
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DistributionApi()
-validator_addr = 'validator_addr_example' # str | Bech32 OperatorAddress of validator
-withdraw_request_body = swagger_client.WithdrawRequestBody3() # WithdrawRequestBody3 |  (optional)
+api_instance = dex_api_python.DistributionApi()
+validator_addr = 'coinexvaloper1qwl879nx9t6kef4supyazayf7vjhennyh568ys' # str | Bech32 OperatorAddress of validator
+withdraw_request_body = dex_api_python.WithdrawRequestBody3() # WithdrawRequestBody3 |  (optional)
 
 try:
     # Withdraw the validator's rewards
@@ -602,15 +602,15 @@ Withdraw a delegator's delegation reward from a single validator
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DistributionApi()
-delegator_addr = 'delegator_addr_example' # str | Bech32 AccAddress of Delegator
-validator_addr = 'validator_addr_example' # str | Bech32 OperatorAddress of validator
-withdraw_request_body = swagger_client.WithdrawRequestBody1() # WithdrawRequestBody1 |  (optional)
+api_instance = dex_api_python.DistributionApi()
+delegator_addr = 'coinex167w96tdvmazakdwkw2u57227eduula2cy572lf' # str | Bech32 AccAddress of Delegator
+validator_addr = 'coinexvaloper1qwl879nx9t6kef4supyazayf7vjhennyh568ys' # str | Bech32 OperatorAddress of validator
+withdraw_request_body = dex_api_python.WithdrawRequestBody1() # WithdrawRequestBody1 |  (optional)
 
 try:
     # Withdraw a delegation reward

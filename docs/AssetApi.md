@@ -1,4 +1,4 @@
-# swagger_client.AssetApi
+# dex_api_python.AssetApi
 
 All URIs are relative to *https://dex-api.coinex.org*
 
@@ -34,14 +34,14 @@ Add forbiddable token whitelist addr
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetApi()
-symbol = 'symbol_example' # str | token symbol
-whitelist = swagger_client.Whitelist() # Whitelist | token whitelist addr
+api_instance = dex_api_python.AssetApi()
+symbol = 'abc' # str | token symbol
+whitelist = dex_api_python.Whitelist() # Whitelist | token whitelist addr
 
 try:
     # Add forbid whitelist
@@ -84,14 +84,14 @@ Burn burnable token
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetApi()
-symbol = 'symbol_example' # str | token symbol
-amount = swagger_client.Amount2() # Amount2 | burn token amount
+api_instance = dex_api_python.AssetApi()
+symbol = 'abc' # str | token symbol
+amount = dex_api_python.Amount2() # Amount2 | burn token amount
 
 try:
     # Burn token
@@ -134,14 +134,14 @@ Add forbidden addresses
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetApi()
-symbol = 'symbol_example' # str | token symbol
-addresses = swagger_client.Addresses() # Addresses | forbidden addresses
+api_instance = dex_api_python.AssetApi()
+symbol = 'abc' # str | token symbol
+addresses = dex_api_python.Addresses() # Addresses | forbidden addresses
 
 try:
     # Forbid address
@@ -184,14 +184,14 @@ Forbid forbiddable token
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetApi()
-symbol = 'symbol_example' # str | token symbol
-base_req = swagger_client.BaseReq() # BaseReq | base req
+api_instance = dex_api_python.AssetApi()
+symbol = 'abc' # str | token symbol
+base_req = dex_api_python.BaseReq() # BaseReq | base req
 
 try:
     # Forbid token
@@ -232,12 +232,12 @@ Get the current asset parameters
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetApi()
+api_instance = dex_api_python.AssetApi()
 
 try:
     # Get the current asset parameters
@@ -276,13 +276,13 @@ Get forbidden addresses with provided `symbol`
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetApi()
-symbol = 'symbol_example' # str | token symbol
+api_instance = dex_api_python.AssetApi()
+symbol = 'abc' # str | token symbol
 
 try:
     # query forbidden addresses
@@ -324,12 +324,12 @@ List all reserved symbols
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetApi()
+api_instance = dex_api_python.AssetApi()
 
 try:
     # List reserved symbols
@@ -368,13 +368,13 @@ Get token with provided `symbol`
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetApi()
-symbol = 'symbol_example' # str | token symbol
+api_instance = dex_api_python.AssetApi()
+symbol = 'abc' # str | token symbol
 
 try:
     # queryToken
@@ -416,12 +416,12 @@ List all existing tokens
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetApi()
+api_instance = dex_api_python.AssetApi()
 
 try:
     # List tokens
@@ -460,13 +460,13 @@ Get token whitelist with provided `symbol`
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetApi()
-symbol = 'symbol_example' # str | token symbol
+api_instance = dex_api_python.AssetApi()
+symbol = 'abc' # str | token symbol
 
 try:
     # queryWhitelist
@@ -508,13 +508,13 @@ Issue a new Token
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetApi()
-token_info = swagger_client.IssueToken() # IssueToken | the detail info about the Token to issue
+api_instance = dex_api_python.AssetApi()
+token_info = dex_api_python.IssueToken() # IssueToken | the detail info about the Token to issue
 
 try:
     # Issue token
@@ -556,14 +556,14 @@ Mint mintable token
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetApi()
-symbol = 'symbol_example' # str | token symbol
-amount = swagger_client.Amount1() # Amount1 | mint token amount
+api_instance = dex_api_python.AssetApi()
+symbol = 'abc' # str | token symbol
+amount = dex_api_python.Amount1() # Amount1 | mint token amount
 
 try:
     # Mint token
@@ -606,14 +606,14 @@ Modify token info
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetApi()
-symbol = 'symbol_example' # str | token symbol
-info = swagger_client.Info() # Info | new token info
+api_instance = dex_api_python.AssetApi()
+symbol = 'abc' # str | token symbol
+info = dex_api_python.Info() # Info | new token info
 
 try:
     # Modify token info
@@ -656,14 +656,14 @@ Remove forbiddable token whitelist addr
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetApi()
-symbol = 'symbol_example' # str | token symbol
-whitelist = swagger_client.Whitelist() # Whitelist | token whitelist addr
+api_instance = dex_api_python.AssetApi()
+symbol = 'abc' # str | token symbol
+whitelist = dex_api_python.Whitelist() # Whitelist | token whitelist addr
 
 try:
     # Remove forbid whitelist
@@ -706,14 +706,14 @@ Transfer token owner ship
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetApi()
-symbol = 'symbol_example' # str | token symbol
-new_owner = swagger_client.NewOwner() # NewOwner | transfer ownership to new owner
+api_instance = dex_api_python.AssetApi()
+symbol = 'abc' # str | token symbol
+new_owner = dex_api_python.NewOwner() # NewOwner | transfer ownership to new owner
 
 try:
     # Transfer ownership
@@ -756,14 +756,14 @@ Remove forbidden addresses
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetApi()
-symbol = 'symbol_example' # str | token symbol
-addresses = swagger_client.Addresses() # Addresses | un forbidden addresses
+api_instance = dex_api_python.AssetApi()
+symbol = 'abc' # str | token symbol
+addresses = dex_api_python.Addresses() # Addresses | un forbidden addresses
 
 try:
     # UnForbid address
@@ -806,14 +806,14 @@ UnForbid forbiddable token
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetApi()
-symbol = 'symbol_example' # str | token symbol
-base_req = swagger_client.BaseReq1() # BaseReq1 | base req
+api_instance = dex_api_python.AssetApi()
+symbol = 'abc' # str | token symbol
+base_req = dex_api_python.BaseReq1() # BaseReq1 | base req
 
 try:
     # UnForbid token

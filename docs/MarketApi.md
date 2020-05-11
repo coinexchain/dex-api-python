@@ -1,4 +1,4 @@
-# swagger_client.MarketApi
+# dex_api_python.MarketApi
 
 All URIs are relative to *https://dex-api.coinex.org*
 
@@ -15,6 +15,11 @@ Method | HTTP request | Description
 [**get_orders_in_market**](MarketApi.md#get_orders_in_market) | **GET** /market/orderbook/{stock}/{money} | Query trading-pair&#39;s orderbook
 [**get_trading_pair**](MarketApi.md#get_trading_pair) | **GET** /market/trading-pairs/{stock}/{money} | Query trading-pair info
 [**modify_price_precision**](MarketApi.md#modify_price_precision) | **POST** /market/price-precision | Modify the price precision of the trading pair in the dex
+[**query_candle_stick**](MarketApi.md#query_candle_stick) | **GET** /market/candle-sticks | Query market candleStick
+[**query_deal**](MarketApi.md#query_deal) | **GET** /market/deals | Query market deal
+[**query_depth**](MarketApi.md#query_depth) | **GET** /market/depths | Query market depth
+[**query_order**](MarketApi.md#query_order) | **GET** /market/user-orders | Query account&#39;s order
+[**query_tickers**](MarketApi.md#query_tickers) | **GET** /market/tickers | Query market tickers
 [**query_trading_pairs**](MarketApi.md#query_trading_pairs) | **GET** /market/exist-trading-pairs | Query all trading-pair infos in blockchain
 
 
@@ -27,13 +32,13 @@ Cancel the order
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.MarketApi()
-order_info = swagger_client.OrderInfo() # OrderInfo | cancel order tx
+api_instance = dex_api_python.MarketApi()
+order_info = dex_api_python.OrderInfo() # OrderInfo | cancel order tx
 
 try:
     # Cancel the order
@@ -73,13 +78,13 @@ Cancel the trading-pair
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.MarketApi()
-info = swagger_client.Info2() # Info2 | cancel trading-pair in dex
+api_instance = dex_api_python.MarketApi()
+info = dex_api_python.Info2() # Info2 | cancel trading-pair in dex
 
 try:
     # Cancel the trading-pair
@@ -119,12 +124,12 @@ Create GTE order in blockchain
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.MarketApi()
+api_instance = dex_api_python.MarketApi()
 order_info = NULL # object | create order tx
 
 try:
@@ -165,12 +170,12 @@ Create IOC order in blockchain
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.MarketApi()
+api_instance = dex_api_python.MarketApi()
 order_info = NULL # object | create order tx
 
 try:
@@ -211,12 +216,12 @@ Create trading-pair in blockchain
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.MarketApi()
+api_instance = dex_api_python.MarketApi()
 info = NULL # object | Create trading-pair
 
 try:
@@ -257,12 +262,12 @@ Get the current market parameters
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.MarketApi()
+api_instance = dex_api_python.MarketApi()
 
 try:
     # Get the current market parameters
@@ -299,13 +304,13 @@ Query order info
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.MarketApi()
-order_id = 'order_id_example' # str | The order id
+api_instance = dex_api_python.MarketApi()
+order_id = 'coinex1dmz7e2fddhejdz5n7e3qc5szx3zn2gj3ta8rwj' # str | The order id
 
 try:
     # Query order info
@@ -345,13 +350,13 @@ Query user order-id list
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.MarketApi()
-address = 'address_example' # str | The user address
+api_instance = dex_api_python.MarketApi()
+address = 'coinex1dmz7e2fddhejdz5n7e3qc5szx3zn2gj3ta8rwj' # str | The user address
 
 try:
     # Query user order-id list
@@ -391,14 +396,14 @@ Query trading-pair's orderbook
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.MarketApi()
-stock = 'stock_example' # str | stock symbol
-money = 'money_example' # str | money symbol
+api_instance = dex_api_python.MarketApi()
+stock = 'btc' # str | stock symbol
+money = 'cet' # str | money symbol
 
 try:
     # Query trading-pair's orderbook
@@ -439,14 +444,14 @@ Query trading-pair info
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.MarketApi()
-stock = 'stock_example' # str | stock symbol
-money = 'money_example' # str | money symbol
+api_instance = dex_api_python.MarketApi()
+stock = 'btc' # str | stock symbol
+money = 'cet' # str | money symbol
 
 try:
     # Query trading-pair info
@@ -487,13 +492,13 @@ Modify the price precision of the trading pair in the dex
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.MarketApi()
-info = swagger_client.Info1() # Info1 | trading-pair, price-precision as params
+api_instance = dex_api_python.MarketApi()
+info = dex_api_python.Info1() # Info1 | trading-pair, price-precision as params
 
 try:
     # Modify the price precision of the trading pair in the dex
@@ -524,6 +529,272 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **query_candle_stick**
+> list[CandleStick] query_candle_stick(market, timespan, time, sid, count)
+
+Query market candleStick
+
+Query candleStick until to given time
+
+### Example
+```python
+from __future__ import print_function
+import time
+import dex_api_python
+from dex_api_python.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = dex_api_python.MarketApi()
+market = 'market_example' # str | stock/money
+timespan = 'timespan_example' # str | 1min/1hour/1day
+time = 789 # int | Unix timestamp
+sid = 789 # int | Sequence id
+count = 56 # int | Querier candleStick count limited to 1024
+
+try:
+    # Query market candleStick
+    api_response = api_instance.query_candle_stick(market, timespan, time, sid, count)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling MarketApi->query_candle_stick: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **market** | **str**| stock/money | 
+ **timespan** | **str**| 1min/1hour/1day | 
+ **time** | **int**| Unix timestamp | 
+ **sid** | **int**| Sequence id | 
+ **count** | **int**| Querier candleStick count limited to 1024 | 
+
+### Return type
+
+[**list[CandleStick]**](CandleStick.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **query_deal**
+> InlineResponse20056 query_deal(market, time, sid, count)
+
+Query market deal
+
+Query market deal until to given time
+
+### Example
+```python
+from __future__ import print_function
+import time
+import dex_api_python
+from dex_api_python.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = dex_api_python.MarketApi()
+market = 'market_example' # str | stock/money
+time = 789 # int | Unix timestamp
+sid = 789 # int | Sequence id
+count = 56 # int | Querier deal count limited to 1024
+
+try:
+    # Query market deal
+    api_response = api_instance.query_deal(market, time, sid, count)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling MarketApi->query_deal: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **market** | **str**| stock/money | 
+ **time** | **int**| Unix timestamp | 
+ **sid** | **int**| Sequence id | 
+ **count** | **int**| Querier deal count limited to 1024 | 
+
+### Return type
+
+[**InlineResponse20056**](InlineResponse20056.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **query_depth**
+> InlineResponse20055 query_depth(market, count)
+
+Query market depth
+
+Query purchases and sales of a market at all price levels
+
+### Example
+```python
+from __future__ import print_function
+import time
+import dex_api_python
+from dex_api_python.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = dex_api_python.MarketApi()
+market = 'market_example' # str | stock/money
+count = 56 # int | Querier count limited to 1024
+
+try:
+    # Query market depth
+    api_response = api_instance.query_depth(market, count)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling MarketApi->query_depth: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **market** | **str**| stock/money | 
+ **count** | **int**| Querier count limited to 1024 | 
+
+### Return type
+
+[**InlineResponse20055**](InlineResponse20055.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **query_order**
+> UserOrder query_order(account, time, sid, count, token=token, tag=tag)
+
+Query account's order
+
+Query account's order activities in all markets until to given time
+
+### Example
+```python
+from __future__ import print_function
+import time
+import dex_api_python
+from dex_api_python.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = dex_api_python.MarketApi()
+account = 'account_example' # str | Bech32 address
+time = 789 # int | Unix timestamp
+sid = 789 # int | Sequence id
+count = 56 # int | Querier order count limited to 1024
+token = 'token_example' # str | Symbol (optional)
+tag = 'tag_example' # str | Filter responses type by tag string create/fill/cancel (optional)
+
+try:
+    # Query account's order
+    api_response = api_instance.query_order(account, time, sid, count, token=token, tag=tag)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling MarketApi->query_order: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **account** | **str**| Bech32 address | 
+ **time** | **int**| Unix timestamp | 
+ **sid** | **int**| Sequence id | 
+ **count** | **int**| Querier order count limited to 1024 | 
+ **token** | **str**| Symbol | [optional] 
+ **tag** | **str**| Filter responses type by tag string create/fill/cancel | [optional] 
+
+### Return type
+
+[**UserOrder**](UserOrder.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **query_tickers**
+> list[Tickers] query_tickers(market_list)
+
+Query market tickers
+
+Query tickers info
+
+### Example
+```python
+from __future__ import print_function
+import time
+import dex_api_python
+from dex_api_python.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = dex_api_python.MarketApi()
+market_list = ['market_list_example'] # list[str] | Market count limited to 1~100
+
+try:
+    # Query market tickers
+    api_response = api_instance.query_tickers(market_list)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling MarketApi->query_tickers: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **market_list** | [**list[str]**](str.md)| Market count limited to 1~100 | 
+
+### Return type
+
+[**list[Tickers]**](Tickers.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **query_trading_pairs**
 > InlineResponse20043 query_trading_pairs()
 
@@ -533,12 +804,12 @@ Query all trading-pair infos in blockchain
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.MarketApi()
+api_instance = dex_api_python.MarketApi()
 
 try:
     # Query all trading-pair infos in blockchain

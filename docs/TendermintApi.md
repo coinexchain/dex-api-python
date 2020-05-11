@@ -1,4 +1,4 @@
-# swagger_client.TendermintApi
+# dex_api_python.TendermintApi
 
 All URIs are relative to *https://dex-api.coinex.org*
 
@@ -21,13 +21,13 @@ Get a block at a certain height
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TendermintApi()
-height = 8.14 # float | Block height
+api_instance = dex_api_python.TendermintApi()
+height = 1 # float | Block height
 
 try:
     # Get a block at a certain height
@@ -67,12 +67,12 @@ Get the latest block
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TendermintApi()
+api_instance = dex_api_python.TendermintApi()
 
 try:
     # Get the latest block
@@ -109,12 +109,12 @@ Get the latest validator set
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TendermintApi()
+api_instance = dex_api_python.TendermintApi()
 
 try:
     # Get the latest validator set
@@ -153,12 +153,12 @@ Information about the connected node
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TendermintApi()
+api_instance = dex_api_python.TendermintApi()
 
 try:
     # The properties of the connected node
@@ -197,12 +197,12 @@ Get if the node is currently syning with other nodes
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TendermintApi()
+api_instance = dex_api_python.TendermintApi()
 
 try:
     # Syncing state of node
@@ -238,13 +238,13 @@ Get a validator set a certain height
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dex_api_python
+from dex_api_python.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.TendermintApi()
-height = 8.14 # float | Block height
+api_instance = dex_api_python.TendermintApi()
+height = 1 # float | Block height
 
 try:
     # Get a validator set a certain height
