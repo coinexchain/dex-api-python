@@ -41,20 +41,18 @@ class ApiContext(object):
 
 def test():
     # init keybase
-    key_name = "cat".encode("utf-8")
+    key_name = "key_name".encode("utf-8")
     password = "12345678".encode("utf-8")
     to_addr = "coinex10c22dwn7hxps77tnkpj5pzu9zcpq5zf76xms55"
 
     lib = ctypes.CDLL('./wallet_mac.so')
-    lib.BearInit('../../tmp'.encode("utf-8"))
+    lib.BearInit('tmp'.encode("utf-8"))
     get_address = lib.GetAddress
     get_address.restype = ctypes.c_char_p
 
-    # from_addr = "coinex1yax5pu64azccpqmpq3m7z797qf7tmwkgh4qw2p"
+    # from_addr = "coinex10hmcj9sp6gef5244wxkwt9jgweuwpp9fjcmwng"
     from_addr_bytes = get_address(key_name)
     from_addr_str = str(from_addr_bytes, encoding='utf-8')
-
-
 
     # init param
     fee = [
@@ -66,7 +64,7 @@ def test():
     coins = [
         {
             'denom': 'cet',
-            'amount': "1000000"
+            'amount': "1000000000"
         }
     ]
     gas = "30000"

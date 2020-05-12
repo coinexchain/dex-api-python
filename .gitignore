@@ -67,3 +67,6 @@ target/
 /git_push.sh
 /.swagger-codegen/
 /tmp/
+
+#tmp file
+.idea
