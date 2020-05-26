@@ -12,8 +12,10 @@ import ctypes
 
 class ApiContext(object):
 
-    def __init__(self, from_address, name, password, base_req, lib):
-        self.client = ApiClient()
+    def __init__(self, from_address, name, password, base_req, lib, api_client=None):
+        if api_client is None:
+            api_client = ApiClient()
+        self.api_client = api_client
         self.from_address = from_address
         self.name = name
         self.password = password
@@ -21,7 +23,7 @@ class ApiContext(object):
         self.lib = lib
 
     def refresh_acc_num_and_seq(self):
-        (data, data_str) = AuthApi().get_account(address=self.from_address)
+        (data, data_str) = AuthApi(self.api_client).get_account(address=self.from_address)
         self.base_req['account_number'] = data.result.account_number
         self.base_req['sequence'] = data.result.sequence
 
@@ -35,7 +37,7 @@ class ApiContext(object):
         tx = tx['tx']
         std_tx = StdTxCore(tx['msg'], tx['fee'], tx['memo'], tx['signatures'])
         tx_broadcast = TxBroadcast(std_tx, 'block')
-        (resp, resp_str) = TransactionsApi().broadcast_tx(tx_broadcast)
+        (resp, resp_str) = TransactionsApi(self.api_client).broadcast_tx(tx_broadcast)
         return resp
 
 
